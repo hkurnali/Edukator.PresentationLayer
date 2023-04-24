@@ -1,3 +1,8 @@
+using Edukator.BusinessLayer.Abstract;
+using Edukator.BusinessLayer.Concrete;
+using Edukator.DataAccesLayer.Abstract;
+using Edukator.DataAccesLayer.Concrete;
+using Edukator.DataAccesLayer.EntityFramework;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -22,7 +27,12 @@ namespace Edukator.PresentationLayer
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
+
         {
+
+            services.AddDbContext<Context>();
+            services.AddScoped<ICategoryDal,EfCategoryDal>();
+            services.AddScoped<ICategoryService,CategoryManager>();
             services.AddControllersWithViews();
         }
 

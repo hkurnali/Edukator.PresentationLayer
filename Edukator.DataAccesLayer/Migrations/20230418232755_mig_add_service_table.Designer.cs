@@ -3,14 +3,16 @@ using Edukator.DataAccesLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Edukator.DataAccesLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20230418232755_mig_add_service_table")]
+    partial class mig_add_service_table
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -122,42 +124,6 @@ namespace Edukator.DataAccesLayer.Migrations
                     b.ToTable("Courses");
                 });
 
-            modelBuilder.Entity("Edukator.EntityLayer.Concrete.MailSubscribe", b =>
-                {
-                    b.Property<int>("MailSubscribeID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Mail")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("MailSubscribeID");
-
-                    b.ToTable("MailSubscribes");
-                });
-
-            modelBuilder.Entity("Edukator.EntityLayer.Concrete.Map", b =>
-                {
-                    b.Property<int>("MapID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("MapID");
-
-                    b.ToTable("Maps");
-                });
-
             modelBuilder.Entity("Edukator.EntityLayer.Concrete.Service", b =>
                 {
                     b.Property<int>("ServiceID")
@@ -177,51 +143,6 @@ namespace Edukator.DataAccesLayer.Migrations
                     b.HasKey("ServiceID");
 
                     b.ToTable("Services");
-                });
-
-            modelBuilder.Entity("Edukator.EntityLayer.Concrete.SocialMedia", b =>
-                {
-                    b.Property<int>("SocialMediaID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Icon")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImgUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("SocialMediaID");
-
-                    b.ToTable("SocialMedias");
-                });
-
-            modelBuilder.Entity("Edukator.EntityLayer.Concrete.Testimonial", b =>
-                {
-                    b.Property<int>("TestimonialID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("TestimonialCompany")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TestimonialDescription")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TestimonialName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TestimonialTitle")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("TestimonialID");
-
-                    b.ToTable("Testimonials");
                 });
 
             modelBuilder.Entity("Edukator.EntityLayer.Concrete.Course", b =>

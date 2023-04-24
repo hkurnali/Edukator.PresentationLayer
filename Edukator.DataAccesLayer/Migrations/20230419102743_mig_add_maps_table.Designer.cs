@@ -3,14 +3,16 @@ using Edukator.DataAccesLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Edukator.DataAccesLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20230419102743_mig_add_maps_table")]
+    partial class mig_add_maps_table
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -177,27 +179,6 @@ namespace Edukator.DataAccesLayer.Migrations
                     b.HasKey("ServiceID");
 
                     b.ToTable("Services");
-                });
-
-            modelBuilder.Entity("Edukator.EntityLayer.Concrete.SocialMedia", b =>
-                {
-                    b.Property<int>("SocialMediaID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Icon")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImgUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("SocialMediaID");
-
-                    b.ToTable("SocialMedias");
                 });
 
             modelBuilder.Entity("Edukator.EntityLayer.Concrete.Testimonial", b =>
