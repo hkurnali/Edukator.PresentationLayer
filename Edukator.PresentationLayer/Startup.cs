@@ -34,6 +34,13 @@ namespace Edukator.PresentationLayer
             services.AddScoped<ICategoryDal,EfCategoryDal>();
             services.AddScoped<ICategoryService,CategoryManager>();
             services.AddControllersWithViews();
+
+            services.AddScoped<ICourseDal, EfCourseDal>();
+            services.AddScoped<ICourseService, CourseManager>();
+
+            services.AddScoped<ISocialMediaDal, EfSocialMediaDal>();
+            services.AddScoped<ISocialMediaService, SocialMediaMenager>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
