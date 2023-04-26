@@ -1,0 +1,41 @@
+﻿@model Edukator.EntityLayer.Concrete.Course
+@{
+    ViewData["Title"] = "UpdateCourse";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-sm-12 col-xl-12">
+    <div class="bg-light rounded h-100 p-4">
+        <h6 class="mb-4">Yeni Kurs Girişi Girişi</h6>
+        <form method="post">
+            <div class="mb-3">
+                <input type="hidden" asp-for="CourseID" />
+                <label for="Title" class="form-label">Kurs  Başlığı</label>
+                <input type="text" class="form-control" id="Title" asp-for="Title" />
+            </div>
+            <div class="mb-3">
+                <label for="Description" class="form-label">Kurs Açıklama</label>
+                <input type="text" class="form-control" id="Description" asp-for="Description" />
+            </div>
+            <div class="mb-3">
+                <label for="ImageURL" class="form-label">Kurs Url </label>
+                <input type="text" class="form-control" id="ImageURL" asp-for="ImageURL" />
+            </div>
+            <div class="mb-3">
+                <label for="Price" class="form-label">Kurs Fiyat </label>
+                <input type="text" class="form-control" id="Price" asp-for="Price" />
+            </div>
+            <div class="mb-3">
+                <label for="Review" class="form-label">Kurs İnceleme </label>
+                <input type="text" class="form-control" id="Review" asp-for="Review" />
+            </div>
+            <div class="mb-3">
+                <label for="CategoryID" class="form-label">Kategori ID </label>
+                <input type="text" class="form-control" id="CategoryID" asp-for="CategoryID" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+        </form>
+    </div>
+</div>
+

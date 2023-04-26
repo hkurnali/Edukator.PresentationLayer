@@ -9,5 +9,7 @@ namespace Edukator.DataAccesLayer.Abstract
 {
     public interface ICourseDal:IGenericDal<Course>
     {
+        List<Course> GetCoursesWithCategory();
+        
     }
 }

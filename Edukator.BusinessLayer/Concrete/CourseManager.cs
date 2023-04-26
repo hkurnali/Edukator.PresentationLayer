@@ -20,6 +20,11 @@ namespace Edukator.BusinessLayer.Concrete
             _courseDal = courseDal;
         }
 
+        public List<Course> TGetCoursesWithCategory()
+        {
+            return _courseDal.GetCoursesWithCategory();
+        }
+
         public void TDelete(Course t)
         {
           _courseDal.Delete(t);

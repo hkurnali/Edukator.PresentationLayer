@@ -9,5 +9,6 @@ namespace Edukator.DataAccesLayer.Abstract
 {
     public interface IContactDal : IGenericDal<Contact>
     {
+        
     }
 }

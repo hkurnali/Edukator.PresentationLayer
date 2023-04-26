@@ -33,7 +33,7 @@ namespace Edukator.PresentationLayer
             services.AddDbContext<Context>();
             services.AddScoped<ICategoryDal,EfCategoryDal>();
             services.AddScoped<ICategoryService,CategoryManager>();
-            services.AddControllersWithViews();
+           
 
             services.AddScoped<ICourseDal, EfCourseDal>();
             services.AddScoped<ICourseService, CourseManager>();
@@ -41,6 +41,7 @@ namespace Edukator.PresentationLayer
             services.AddScoped<ISocialMediaDal, EfSocialMediaDal>();
             services.AddScoped<ISocialMediaService, SocialMediaMenager>();
 
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

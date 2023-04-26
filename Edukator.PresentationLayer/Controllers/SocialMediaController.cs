@@ -44,5 +44,13 @@ namespace Edukator.PresentationLayer.Controllers
             var values = _socialMediaService.TGetByID(id);
             return View(values);
         }
+        [HttpPost]
+        public IActionResult UpdateSocialMedia(SocialMedia socialMedia)
+
+        {
+            _socialMediaService.TUpdate(socialMedia);
+            return RedirectToAction("Index");
+
+        }
     }
 }

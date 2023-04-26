@@ -39,7 +39,7 @@ namespace Edukator.DataAccesLayer.Repostories
         public void Update(T t)
         {
             var context = new Context();
-            context.Add(t);
+            context.Update(t);
             context.SaveChanges();
         }
     }
