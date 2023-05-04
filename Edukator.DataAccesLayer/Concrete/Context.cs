@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Edukator.DataAccesLayer.Concrete
 {
-    public class Context: IdentityDbContext
+    public class Context:IdentityDbContext< AddUser,AppRole, int>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -24,5 +24,9 @@ namespace Edukator.DataAccesLayer.Concrete
         public DbSet<MailSubscribe> MailSubscribes { get; set; }
         public DbSet<Map> Maps { get; set; }
         public DbSet<SocialMedia> SocialMedias { get; set; }
+    }
+
+    public class AddRole
+    {
     }
 }

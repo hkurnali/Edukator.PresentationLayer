@@ -12,6 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Edukator.DataAccesLayer\Edukator.DataAccesLayer.csproj" />
     <ProjectReference Include="..\Edukator.EntityLayer\Edukator.EntityLayer.csproj" />
   </ItemGroup>
