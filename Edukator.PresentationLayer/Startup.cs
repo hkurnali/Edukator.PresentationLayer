@@ -46,6 +46,10 @@ namespace Edukator.PresentationLayer
             services.AddScoped<IAboutService, AboutManager>();
 
 
+            services.AddScoped<ITestimonialDal, EfTestimonialDal>();
+            services.AddScoped<ITestimonialService, TestimonialManager>();
+
+
             services.AddScoped<IServiceDal, EfServiceDal>();
             services.AddScoped<IServiceService, ServiceManager>();
 

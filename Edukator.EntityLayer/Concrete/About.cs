@@ -14,6 +14,12 @@ namespace Edukator.EntityLayer.Concrete
         public string Title3 { get; set; }
         public string Description { get; set; }
         public string ImageUrl { get; set; }
+        public string ImageUrl2 { get; set; }
+        public string ImageUrl3 { get; set; }
+        public string ImageUrl4 { get; set; }
         public string ImageName { get; set; }
+        public string ImageName2 { get; set; }
+        public string ImageName3 { get; set; }
+        public string ImageName4 { get; set; }
     }
 }
