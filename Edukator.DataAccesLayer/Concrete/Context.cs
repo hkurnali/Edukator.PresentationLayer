@@ -24,9 +24,10 @@ namespace Edukator.DataAccesLayer.Concrete
         public DbSet<MailSubscribe> MailSubscribes { get; set; }
         public DbSet<Map> Maps { get; set; }
         public DbSet<SocialMedia> SocialMedias { get; set; }
+       public DbSet<Feature> Features { get; set; }
+
+        public DbSet<About> Abouts { get; set; }
     }
 
-    public class AddRole
-    {
-    }
+   
 }

@@ -4,50 +4,22 @@ using Edukator.DataAccesLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Edukator.DataAccesLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20230508165206_mig_add_feature")]
+    partial class mig_add_feature
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.17")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("Edukator.EntityLayer.Concrete.About", b =>
-                {
-                    b.Property<int>("AboutID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImageName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImageUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title3")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("AboutID");
-
-                    b.ToTable("Abouts");
-                });
 
             modelBuilder.Entity("Edukator.EntityLayer.Concrete.AddUser", b =>
                 {

@@ -39,6 +39,16 @@ namespace Edukator.PresentationLayer
             services.AddScoped<ICourseDal, EfCourseDal>();
             services.AddScoped<ICourseService, CourseManager>();
 
+            services.AddScoped<IFeatureDal, EfFeatureDal>();
+            services.AddScoped<IFeatureService, FeatureManager>();
+
+            services.AddScoped<IAboutDal, EfAboutDal>();
+            services.AddScoped<IAboutService, AboutManager>();
+
+
+            services.AddScoped<IServiceDal, EfServiceDal>();
+            services.AddScoped<IServiceService, ServiceManager>();
+
             services.AddScoped<ISocialMediaDal, EfSocialMediaDal>();
             services.AddScoped<ISocialMediaService, SocialMediaMenager>();
             services.AddIdentity<AddUser,AppRole>().AddEntityFrameworkStores<Context>();
