@@ -13,11 +13,20 @@ namespace Edukator.DataAccesLayer.EntityFramework
 {
     public class EfCourseDal : GenericRepostory<Course>, ICourseDal
     {
-           public List<Course> GetCoursesWithCategory()
+        
+
+        public List<Course> GetCoursesWithCategory()
             {
                 Context context = new Context();
                 return context.Courses.Include(x => x.Category).ToList();
             }
-       
+
+        public List<Course> GetCoursesWithCategories()
+        {
+            Context context = new Context();
+            return context.Courses.Include(x => x.Category).ToList();
+        }
+
+
     }
 }

@@ -49,5 +49,10 @@ namespace Edukator.BusinessLayer.Concrete
         {
            _courseDal.Update(t);
         }
+
+        public List<Course> TGetCoursesWithCategories()
+        {
+            return _courseDal.GetCoursesWithCategories();
+        }
     }
 }

@@ -4,6 +4,7 @@ using Edukator.DataAccesLayer.Abstract;
 using Edukator.DataAccesLayer.Concrete;
 using Edukator.DataAccesLayer.EntityFramework;
 using Edukator.EntityLayer.Concrete;
+using Edukator.PresentationLayer.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -50,12 +51,17 @@ namespace Edukator.PresentationLayer
             services.AddScoped<ITestimonialService, TestimonialManager>();
 
 
+
+            services.AddScoped<IMailSubscribeDal, EfMailSubscribeDal>();
+            services.AddScoped<IMailSubscribeService, MailSubscribeManager>();
+
+
             services.AddScoped<IServiceDal, EfServiceDal>();
             services.AddScoped<IServiceService, ServiceManager>();
 
             services.AddScoped<ISocialMediaDal, EfSocialMediaDal>();
             services.AddScoped<ISocialMediaService, SocialMediaMenager>();
-            services.AddIdentity<AddUser,AppRole>().AddEntityFrameworkStores<Context>();
+            services.AddIdentity<AddUser,AppRole>().AddEntityFrameworkStores<Context>().AddErrorDescriber<CustomIdentityValidator>();
 
             services.AddControllersWithViews();
         }
