@@ -1,6 +1,7 @@
 ﻿using Edukator.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,11 @@ namespace Edukator.DataAccesLayer.Concrete
        public DbSet<Feature> Features { get; set; }
 
         public DbSet<About> Abouts { get; set; }
+        public DbSet<Footer> Footers { get; set; }
+        public DbSet<AboutPageEntrance> AboutPageEntrances { get; set; }
+        public DbSet<AboutPageCourse> AboutPageCourses { get; set; }
+        public DbSet<AboutPageTeam> AboutPageTeams { get; set; }
+        public DbSet<AboutPageValue> AboutPageValues { get; set;}
     }
 
    

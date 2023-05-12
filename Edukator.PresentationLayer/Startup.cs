@@ -40,8 +40,22 @@ namespace Edukator.PresentationLayer
             services.AddScoped<ICourseDal, EfCourseDal>();
             services.AddScoped<ICourseService, CourseManager>();
 
+            services.AddScoped<IAboutPageEntranceDal, EfAboutPageEntranceDal>();
+            services.AddScoped<IAboutPageEntranceService, AboutPageEntranceManager>();
+
+            services.AddScoped<IAboutPageTeamDal, EfAboutPageTeamDal>();
+            services.AddScoped<IAboutPageTeamService, AboutPageTeamManager>();
+
+            services.AddScoped<IAboutPageValueDal, EfAboutPageValueDal>();
+            services.AddScoped<IAboutPageValueService, AboutPageValueManager>();
+
             services.AddScoped<IFeatureDal, EfFeatureDal>();
             services.AddScoped<IFeatureService, FeatureManager>();
+
+
+
+            services.AddScoped<IAboutPageCourseDal, EfAboutPageCourseDal>();
+            services.AddScoped<IAboutPageCourseService, AboutPageCourseManager>();
 
             services.AddScoped<IAboutDal, EfAboutDal>();
             services.AddScoped<IAboutService, AboutManager>();
@@ -54,6 +68,10 @@ namespace Edukator.PresentationLayer
 
             services.AddScoped<IMailSubscribeDal, EfMailSubscribeDal>();
             services.AddScoped<IMailSubscribeService, MailSubscribeManager>();
+
+
+            services.AddScoped<IFooterDal, EfFooterDal>();
+            services.AddScoped<IFooterService, FooterManager>();
 
 
             services.AddScoped<IServiceDal, EfServiceDal>();

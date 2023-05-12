@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+@await Component.InvokeAsync("_HeadPartial","Default")
+
+<body>
+    <!--header-->
+    @await Component.InvokeAsync("_NavbarPartial","Default")
+    <!--/header-->
+    <!-- breadcrumb -->
+   @await Component.InvokeAsync("_AboutPagePartial")
+    <!--//breadcrumb-->
+    <!--/w3l-aboutblock1-->
+    @await Component.InvokeAsync("_AboutPageEntrancePartial")
+    <!--//w3l-aboutblock1-->
+    <!-- features-section -->
+    @await Component.InvokeAsync("_AboutPageCoursePartial")
+    <!-- features section -->
+    <!--/team-sec-->
+    @await Component.InvokeAsync("_AboutPageTeamPartial")
+    <!--//team-sec-->
+    <!--/progress-->
+    @await Component.InvokeAsync("_AboutPageValuePartial")
+    <!--//progress-->
+    <!--/w3l-project-->
+    @await Component.InvokeAsync("_AboutPageJoinPartial")
+    <!--//w3l-project-->
+    <!--/footer-->
+    @await Component.InvokeAsync("_FooterPartial","Default")
+
+    @await Component.InvokeAsync("_ScriptsPartial","Default")
+    
+    
+</body>
+
+</html>

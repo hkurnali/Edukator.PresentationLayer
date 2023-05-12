@@ -1,0 +1,32 @@
+﻿@model List<Edukator.EntityLayer.Concrete.AboutPageValue>
+<section class="w3l-servicesblock w3l-servicesblock1 py-5" id="progress">
+    <div class="container py-lg-5 py-md-4 py-2">
+        <div class="row">
+            <div class="col-lg-6 align-self pr-lg-4">
+                @foreach(var x in Model)
+                {
+                <div class="progress-info info1">
+                    <h6 class="progress-tittle">@x.ValueName <span class="">@x.Value%</span></h6>
+                    <div class="progress">
+                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width:@x.Value%" aria-valuenow="90"
+                             aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+                }
+              
+
+            </div>
+            <div class="col-lg-6 mt-lg-0 mt-5 pl-lg-5">
+                @foreach(var x in Model)
+                {
+                <h5 class="title-subw3hny mb-1">@x.Title</h5>
+                <h3 class="title-w3l"> @x.Title2<span class="inn-text"></span></h3>
+                <p class="mt-md-4 mt-3">
+                    @x.Description
+                </p>
+                }
+            </div>
+        </div>
+    </div>
+</section>

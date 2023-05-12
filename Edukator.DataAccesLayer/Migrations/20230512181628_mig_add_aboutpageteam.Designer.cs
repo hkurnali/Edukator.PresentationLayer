@@ -4,14 +4,16 @@ using Edukator.DataAccesLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Edukator.DataAccesLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20230512181628_mig_add_aboutpageteam")]
+    partial class mig_add_aboutpageteam
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -161,33 +163,6 @@ namespace Edukator.DataAccesLayer.Migrations
                     b.HasKey("AboutPageTeamID");
 
                     b.ToTable("AboutPageTeams");
-                });
-
-            modelBuilder.Entity("Edukator.EntityLayer.Concrete.AboutPageValue", b =>
-                {
-                    b.Property<int>("AboutPageValueID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Value")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ValueName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("AboutPageValueID");
-
-                    b.ToTable("AboutPageValues");
                 });
 
             modelBuilder.Entity("Edukator.EntityLayer.Concrete.AddUser", b =>

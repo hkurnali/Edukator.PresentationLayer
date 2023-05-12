@@ -1,0 +1,50 @@
+﻿@model List<Edukator.EntityLayer.Concrete.AboutPageCourse>
+<section class="w3l-features py-5" id="work">
+    <div class="container py-lg-5 py-md-4 py-2">
+        @foreach (var x in Model)
+        {
+        <div class="row main-cont-wthree-2 align-items-center">
+           
+            <div class="col-lg-6 feature-grid-left pr-lg-5">
+                <h5 class="title-subw3hny">@x.Title1</h5>
+                <h3 class="title-w3l mb-4">
+                    @x.Title2 <span class="inn-text">Education</span>
+                </h3>
+                <h5 class="title-subw3hny">@x.Title3</h5>
+                <p class="text-para">
+                    @x.Description
+                </p>
+                <a href="about.html" class="btn btn-style btn-primary mt-lg-5 mt-4">Devamını Oku</a>
+            </div>
+            <div class="col-lg-6 feature-grid-right mt-lg-0 mt-5 pl-lg-5">
+                <div class="call-grids-w3 d-grid">
+                    <div class="grids-1 box-wrap">
+                        <div class="icon">
+                            <i class="@x.Icon1"></i>
+                        </div>
+                        <h4><a href="about.html" class="title-head">@x.IconName1</a></h4>
+                    </div>
+                    <div class="grids-1 box-wrap">
+                        <div class="icon">
+                            <i class="@x.Icon2"></i>
+                        </div>
+                        <h4><a href="about.html" class="title-head">@x.IconName2</a></h4>
+                    </div>
+                    <div class="grids-1 box-wrap">
+                        <div class="icon">
+                            <i class="@x.Icon3"></i>
+                        </div>
+                        <h4><a href="about.html" class="title-head">@x.IconName3</a></h4>
+                    </div>
+                    <div class="grids-1 box-wrap">
+                        <div class="icon">
+                            <i class="@x.Icon4"></i>
+                        </div>
+                        <h4><a href="about.html" class="title-head">@x.IconName4</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+            }
+    </div>
+</section>
