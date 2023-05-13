@@ -43,6 +43,10 @@ namespace Edukator.PresentationLayer
             services.AddScoped<IAboutPageEntranceDal, EfAboutPageEntranceDal>();
             services.AddScoped<IAboutPageEntranceService, AboutPageEntranceManager>();
 
+
+            services.AddScoped<IMapDal, EfMapDal>();
+            services.AddScoped<IMapService, MapManager>();
+
             services.AddScoped<IAboutPageTeamDal, EfAboutPageTeamDal>();
             services.AddScoped<IAboutPageTeamService, AboutPageTeamManager>();
 
@@ -72,6 +76,9 @@ namespace Edukator.PresentationLayer
 
             services.AddScoped<IFooterDal, EfFooterDal>();
             services.AddScoped<IFooterService, FooterManager>();
+
+            services.AddScoped<IContactPageMessageDal, EfContactPageMessageDal>();
+            services.AddScoped<IContactPageMessageService, ContactPageMessageManager>();
 
 
             services.AddScoped<IServiceDal, EfServiceDal>();

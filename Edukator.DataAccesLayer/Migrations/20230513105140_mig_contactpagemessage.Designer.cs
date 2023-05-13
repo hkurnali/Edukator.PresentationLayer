@@ -4,14 +4,16 @@ using Edukator.DataAccesLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Edukator.DataAccesLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20230513105140_mig_contactpagemessage")]
+    partial class mig_contactpagemessage
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -378,19 +380,19 @@ namespace Edukator.DataAccesLayer.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Address")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Mail")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Query")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Subject")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Tel")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("title2")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ContactPageMessageID");

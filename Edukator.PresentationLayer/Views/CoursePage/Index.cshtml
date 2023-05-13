@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+
+@await Component.InvokeAsync("_HeadPartial","Default")
+
+<body>
+@await Component.InvokeAsync("_NavbarPartial","Default")
+    <!--/header-->
+    <!-- breadcrumb -->
+   @await Component.InvokeAsync("_CoursePagePartial")
+    <!--//breadcrumb-->
+    <!--/-->
+    @await Component.InvokeAsync("_AboutPartial","Default")
+    <!--//-->
+    <!--/popular-Courses-->
+    @await Component.InvokeAsync("_CoursePartial","Default")
+    <!--//popular-Courses-->
+    <!--/footer-->
+    @await Component.InvokeAsync("_FooterPartial","Default")
+
+    @await Component.InvokeAsync("_ScriptsPartial","Default")
+    <!-- //footer -->
+    <!-- Js scripts -->
+    <!-- move top -->
+   
+</body>
+
+</html>

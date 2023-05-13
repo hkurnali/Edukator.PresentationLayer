@@ -33,6 +33,7 @@ namespace Edukator.DataAccesLayer.Concrete
         public DbSet<AboutPageCourse> AboutPageCourses { get; set; }
         public DbSet<AboutPageTeam> AboutPageTeams { get; set; }
         public DbSet<AboutPageValue> AboutPageValues { get; set;}
+        public DbSet<ContactPageMessage> ContactPageMessages { get; set; }
     }
 
    
