@@ -27,6 +27,10 @@ namespace Edukator.DataAccesLayer.EntityFramework
             return context.Courses.Include(x => x.Category).ToList();
         }
 
-
+        public List<Course> GetLast5Course()
+        {
+            Context context = new Context();
+            return context.Courses.OrderByDescending(x=>x.CourseID).Take(5).ToList();
+        }
     }
 }

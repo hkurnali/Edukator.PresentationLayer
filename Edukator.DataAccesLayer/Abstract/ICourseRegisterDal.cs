@@ -7,12 +7,9 @@ using System.Threading.Tasks;
 
 namespace Edukator.DataAccesLayer.Abstract
 {
-    public interface ICourseDal:IGenericDal<Course>
+    public interface ICourseRegisterDal:IGenericDal<CourseRegister>
     {
-        List<Course> GetCoursesWithCategory();
-
-        List<Course> GetCoursesWithCategories();
-        List<Course> GetLast5Course();
+        List<CourseRegister> CourseRegisterListWithCoursesAndUsers();
       
     }
 }

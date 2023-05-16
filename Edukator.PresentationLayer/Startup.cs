@@ -47,6 +47,12 @@ namespace Edukator.PresentationLayer
             services.AddScoped<IMapDal, EfMapDal>();
             services.AddScoped<IMapService, MapManager>();
 
+            services.AddScoped<IContactDal, EfContactDal>();
+            services.AddScoped<IContactService, ContactManager>();
+
+            services.AddScoped<ICourseRegisterDal, EfCourseRegisterDal>();
+            services.AddScoped<ICourseRegisterService, CourseRegisterManager>();
+
             services.AddScoped<IAboutPageTeamDal, EfAboutPageTeamDal>();
             services.AddScoped<IAboutPageTeamService, AboutPageTeamManager>();
 

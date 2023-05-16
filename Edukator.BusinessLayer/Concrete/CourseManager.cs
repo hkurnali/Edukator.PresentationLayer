@@ -54,5 +54,10 @@ namespace Edukator.BusinessLayer.Concrete
         {
             return _courseDal.GetCoursesWithCategories();
         }
+
+        public List<Course> TGetLast5Course()
+        {
+            return _courseDal.GetLast5Course();
+        }
     }
 }
