@@ -12,10 +12,10 @@ namespace Edukator.PresentationLayer.Areas.Member.Controllers
     { private readonly ICourseRegisterService _courseRegisterService;
         private readonly UserManager<AddUser> _userManager;
 
-        public MyCourseController(ICourseRegisterService courseRegisterService)
+        public MyCourseController(ICourseRegisterService courseRegisterService, UserManager<AddUser> userManager)
         {
             _courseRegisterService = courseRegisterService;
-            _userManager = _userManager;
+            _userManager = userManager;
         }
 
         public async Task<IActionResult> Index()
