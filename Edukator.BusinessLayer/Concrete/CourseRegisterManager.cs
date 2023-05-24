@@ -30,27 +30,27 @@ namespace Edukator.BusinessLayer.Concrete
 
         public void TDelete(CourseRegister t)
         {
-            throw new NotImplementedException();
+            _courseRegisterDal.Delete(t);
         }
 
         public CourseRegister TGetByID(int id)
         {
-            throw new NotImplementedException();
+           return  _courseRegisterDal.GetByID(id);
         }
 
         public List<CourseRegister> TGetList()
         {
-            throw new NotImplementedException();
+            return _courseRegisterDal.GetList();
         }
 
         public void TInsert(CourseRegister t)
         {
-            throw new NotImplementedException();
+            _courseRegisterDal.Insert(t);
         }
 
         public void TUpdate(CourseRegister t)
         {
-            throw new NotImplementedException();
+            _courseRegisterDal.Update(t);
         }
     }
 }

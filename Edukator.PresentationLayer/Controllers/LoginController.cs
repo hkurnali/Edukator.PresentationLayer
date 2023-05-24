@@ -20,17 +20,17 @@ namespace Edukator.PresentationLayer.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<ActionResult> Index(LoginViewModel model)
-        {  var result=await _signInManager.PasswordSignInAsync(model.Username, model.Password,false,false);
+        public async Task<IActionResult> Index(LoginViewModel model)
+        { 
+            
+            var result=await _signInManager.PasswordSignInAsync(model.Username, model.Password,false,false);
             
             if(result.Succeeded) 
             {
-                return RedirectToAction("Index", "MyCourse", new {area="Member"});
+                return RedirectToAction("Index","MyCourse", new {area="Member"});
             
             
             }
-            
-            
             
             return View();
         }

@@ -1,0 +1,47 @@
+﻿@model List<Edukator.EntityLayer.Concrete.AddUser>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+
+
+
+<div class="col-sm-12 col-xl-12">
+    <div class="bg-light rounded h-100 p-4">
+        <h6 class="mb-4">Kullanıcı Listesi</h6>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Adı Soyad</th>
+                    <th scope="col">Rol Ata</th>
+                   
+
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+
+
+                    <tr>
+                        <th scope="row">@count</th>
+                        <td>@item.Name @item.SUrname</td>
+
+
+                        <td><a href="#" class="btn btn-outline-danger">Role Ata</a></td>
+                       
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a href="/Course/AddCourse/" class="btn btn-outline-primary">Yeni Kurs Girişi</a>
+    </div>
+</div>
+
+
+

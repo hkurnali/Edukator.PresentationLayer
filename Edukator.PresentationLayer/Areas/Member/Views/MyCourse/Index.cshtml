@@ -9,6 +9,7 @@
         <th>#</th>
         <th>Kurs Adı</th>
         <th>Kursa Git</th>
+      
     </tr>
     @foreach (var item in Model)
     {
@@ -16,6 +17,12 @@
             <td>@item.CourseRegisterID</td>
             <td>@item.Course.Title</td>
             <td><a href="#" class="btn btn-primary">Kursa Git</a></td>
+           
         </tr>
+       
     }
 </table>
+<a href="/Member/MyCourse/Register/@ViewBag.id" class="btn btn-primary">Yeni Kurs Kaydı</a>
+
+
+

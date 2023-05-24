@@ -1,0 +1,18 @@
+﻿@model Edukator.EntityLayer.Concrete.CourseRegister
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Areas/Member/Views/MemberLayout/Index.cshtml";
+}
+
+
+<form method="post">
+    <input type="hidden" asp-for="AddUserID" />
+     <label>Kayıt Olmak İstediğiniz Kurs</label>
+     
+    @Html.DropDownListFor(x => x.Course.CourseID, (List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
+
+    
+
+        <button class="btn btn-primary">Kaydol</button>
+
+</form>

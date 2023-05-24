@@ -13,11 +13,11 @@
 
         @await Html.PartialAsync("~/Views/AdminLayout/PartialSpinner.cshtml")
 
-        @await Html.PartialAsync("~/Views/AdminLayout/PartialSidebar.cshtml")
+        @await Html.PartialAsync("MemberSideBarPartial.cshtml")
 
         <div class="content">
 
-            @await Html.PartialAsync("MemberSideBarPartial.cshtml")
+            @await Html.PartialAsync("~/Views/AdminLayout/PartialNavbar.cshtml")
 
             <div class="container-fluid pt-4 px-4">
 
