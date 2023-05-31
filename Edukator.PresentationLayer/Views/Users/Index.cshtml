@@ -1,20 +1,21 @@
-﻿@model List<Edukator.EntityLayer.Concrete.AppRole>
+﻿@model List<Edukator.EntityLayer.Concrete.AddUser>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
 }
 
 
 <div class="col-sm-12 col-xl-12">
     <div class="bg-light rounded h-100 p-4">
-        <h6 class="mb-4">Role işlemleri</h6>
-        <table class="table table-hover">
+        <h6 class="mb-4">Öğrenci Listesi</h6>
+        <table class="table table-bordered">
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Rol Adı</th>
-                    <th scope="col">Sil</th>
-                    <th scope="col">Güncelle</th>
+                    <th scope="col">Ad Soyad</th>
+                    <th scope="col">Şehir</th>
+                  
                     
 
                 </tr>
@@ -22,21 +23,20 @@
             <tbody>
                 @foreach (var item in Model)
                 {
-
+                    count++;
 
                     <tr>
-                        <th scope="row">@item.Id</th>
-                        <td>@item.Name</td>
-                       
+                        <th scope="row">@count</th>
+                        <td>@item.Name @item.SUrname</td>
+                       <td>@item.Ctiy</td>
                         
-                        <td><a href="/AppRole/DeleteRole/@item.Id" class="btn btn-outline-danger">Sil</a></td>
-                        <td><a href="/AppRole/UpdateRole/@item.Id" class="btn btn-outline-success">Güncelle</a></td>
+                       
                        
                     </tr>
                 }
             </tbody>
         </table>
-        <a href="/Course/AddCourse/" class="btn btn-outline-primary">Yeni Kurs Girişi</a>
+       
     </div>
 </div>
 

@@ -19,10 +19,10 @@ namespace Edukator.PresentationLayer.Controllers
         public IActionResult Index()
         {
             var values = _userManager.Users.ToList();
-            return View();
+            return View(values);
         }
         [HttpGet]
-        public async Task<IActionResult> RoleAssing(int id)
+        public async Task<IActionResult> UserRoleAssing(int id)
         {
             var user = _userManager.Users.FirstOrDefault(x => x.Id == id);
             var roles=_roleManager.Roles.ToList();
